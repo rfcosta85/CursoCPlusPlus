@@ -12,7 +12,7 @@ int main(void)
 {
 	setlocale(LC_ALL,"");
 	
-	unsigned short model;
+	int unsigned short model;
 	
 	char answer = 'S';	
 	
