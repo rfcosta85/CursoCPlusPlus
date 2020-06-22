@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <locale>
+#include <ctype.h>
 #define IPI 0.08
 #define PRICE 25000.00
 #define DISCOUNT 0.035
@@ -14,7 +15,7 @@ int main(void)
 	
 	int unsigned short model;
 	
-	char answer = 'S';	
+	char choise, choiseUpper;	
 	
 	do
 	{	
@@ -36,10 +37,12 @@ int main(void)
 		cout << "------------------------------------------\n";
 		
 		cout << "Escolha a sua opção: ";
-		cin >> model;		
+		cin >> model;	
+			
 		
 		switch(model)
 		{
+		
 			case 0:
 			{
 				
@@ -72,8 +75,7 @@ int main(void)
 				cout << "-------------------------------------------\n";
 				
 				cout << "Preço: R$: " << (PRICE * INCREASEOFFACTORY) + PRICE;
-				break;
-				
+				break;				
 			}
 			
 			case 3:
@@ -97,15 +99,31 @@ int main(void)
 				
 				cout << "Preço: R$: " << (((PRICE * IPI) + PRICE) + (((PRICE * IPI) + PRICE) * INCREASEOFFACTORY) + ((PRICE * INCREASEOFFACTORY) * 2)) * DISCOUNT + (PRICE * IPI) + PRICE;
 				break;
-			}						
-						
+				
+				default:
+					
+					cout << "Imbecil! não sabe ler? Escolha os modelos de 0 a 4!";					
+			}				
 		
-		}
+		}		
+		
 		
 		cout << "\nDeseja simular outro modelo (S/N)? ";
-		cin >> answer;
+		cin >> choise;
 		
-	}while(answer != 'N');
+		choiseUpper = toupper(choise);
+		
+		if(choiseUpper != 'S' && choiseUpper != 'N')
+	{
+		cout << "\nInfelizmente você é um imbecil que não sabe a diferença entre S e N e assim encerramos o programa para você deixar de ser imbecil!\n";
+		break;
+	}
+				
+		
+	}
+	while(choiseUpper != 'N');
+	
+	
 	
 	
 	return 0;
