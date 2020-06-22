@@ -15,7 +15,7 @@ int main(void)
 	
 	int unsigned short model;
 	
-	char choise, choiseUpper;	
+	char choice, choiceUpper;	
 	
 	do
 	{	
@@ -102,26 +102,26 @@ int main(void)
 				
 				default:
 					
-					cout << "Imbecil! não sabe ler? Escolha os modelos de 0 a 4!";					
+					cout << "Por favor, escolha os modelos de 0 a 4!";					
 			}				
 		
 		}		
 		
 		
 		cout << "\nDeseja simular outro modelo (S/N)? ";
-		cin >> choise;
+		cin >> choice;
 		
-		choiseUpper = toupper(choise);
+		choiceUpper = toupper(choice);
 		
-		if(choiseUpper != 'S' && choiseUpper != 'N')
+		if(choiceUpper != 'S' && choiceUpper != 'N')
 	{
-		cout << "\nInfelizmente você é um imbecil que não sabe a diferença entre S e N e assim encerramos o programa para você deixar de ser imbecil!\n";
+		cout << "\nOps! Detectamos um erro!\n";
 		break;
 	}
 				
 		
 	}
-	while(choiseUpper != 'N');
+	while(choiceUpper != 'N');
 	
 	
 	
