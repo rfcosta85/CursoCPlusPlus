@@ -13,11 +13,7 @@ int main(void)
 	setlocale(LC_ALL,"");
 	
 	unsigned short model;
-	float price = 25000.00, discount = 0.035, increaseOfFactory = 0.02;
-	float priceWithIpi;
-	float finalPriceWithIncreaseOfFactory = (price * increaseOfFactory) + price;
-	float finalPriceWithIncreaseOfFactoryAndIpi = (priceWithIpi * increaseOfFactory) + priceWithIpi;
-	float finalPriceComplete = (priceWithIpi + (priceWithIpi * increaseOfFactory) + (price * increaseOfFactory * 2) ) * discount + priceWithIpi;
+	
 	char answer = 'S';	
 	
 	do
