@@ -111,9 +111,15 @@ int main(void)
 		cout << "\nDeseja simular outro modelo (S/N)? ";
 		cin >> choice;
 		
-		choiceUpper = toupper(choice);
+		choiceUpper = toupper(choice);	
 		
-		if(choiceUpper != 'S' && choiceUpper != 'N')
+		if(cin.get(%s[^\n]))
+		{
+			break;
+			}	
+		
+		
+		if(choiceUpper. != 'S' && choiceUpper != 'N' )
 	{
 		cout << "\nOps! Detectamos um erro!\n";
 		break;
