@@ -8,8 +8,9 @@ using namespace std;
 int main(void)
 {
 
-    string game[10], round[38], home[10], away[10];
-    int homeScore[10], awayScore[10], totalScore[10], overMeio = 0, overUmMeio = 0, overDoisMeio = 0, overTresMeio = 0, overQuatroMeio = 0, overCincoMeio = 0, overSeiMeio = 0;       
+    string game[10], home[10], away[10];
+    float homeScore[10], awayScore[10], totalScore[10], overMeio = 0, overUmMeio = 0, overDoisMeio = 0, overTresMeio = 0, overQuatroMeio = 0, overCincoMeio = 0, overSeisMeio = 0, underMeio = 0, underUmMeio = 0, underDoisMeio = 0, underTresMeio = 0, underQuatroMeio = 0, underCincoMeio = 0, underSeisMeio = 0, totalGames = 0, averageOverMeio, averageOverUmMeio, averageOverDoisMeio, averageOverTresMeio, averageOverQuatroMeio, averageOverCincoMeio, averageOverSeisMeio, averageUnderMeio, averageUnderUmMeio, averageUnderDoisMeio, averageUnderTresMeio, averageUnderQuatroMeio, averageUnderCincoMeio, averageUnderSeisMeio;
+           
 
     game[0] = home[0] = "Fortaleza " ; away[0] =" Atlético Pr";homeScore[0] = 0; awayScore[0] = 2;totalScore[0] = homeScore[0] + awayScore[0];
     game[1] = home[1] = "Coritiba " ; away[1] = " Internacional";homeScore[1] = 0; awayScore[1] = 1;totalScore[1] = homeScore[1] + awayScore[1];
@@ -26,24 +27,92 @@ int main(void)
     {
         if(totalScore[i] > 0)
         {
-            overMeio += 1;
-            if (totalScore[i] > 1)
-            {
-                overUmMeio += 1;
-            }
             
-        } 
-        
+            overMeio += 1;                       
+            
+        }else
+        {
+            
+            underMeio += 1;
+
+        }
+
+        if(totalScore[i] > 1)
+        {
+
+            overUmMeio += 1;
+
+        }else
+        {
+            
+            underUmMeio += 1;
+
+        }
+
+        if(totalScore[i] > 2)
+        {
+
+            overDoisMeio += 1;
+
+        }else
+        {
+            
+            underDoisMeio += 1;
+
+        }
+
+        if(totalScore[i] > 3)
+        {
+
+            overTresMeio += 1;
+
+        }else
+        {
+            
+            underTresMeio += 1;
+
+        }
+
+        if(totalScore[i] > 4)
+        {
+
+            overQuatroMeio += 1;
+
+        }else
+        {
+            
+            underQuatroMeio += 1;
+
+        }
+
+        if(totalScore[i] > 5)
+        {
+
+            overCincoMeio += 1;
+
+        }else
+        {
+            
+            underCincoMeio += 1;
+
+        }
+
+        if(totalScore[i] > 6)
+        {
+
+            overSeisMeio += 1;
+
+        }else
+        {
+            
+            underSeisMeio += 1;
+
+        }       
         
         cout << home[i] << homeScore[i] << " x " << awayScore[i] << away[i] << "\n\n";
+        totalGames += 1;        
         
-    }
-
-    cout << "----------------------------------\n\n";
-    cout << "Total de over 0.5 na rodada: " << overMeio<< "\n\n";
-    cout << "Total de over 1.5 na rodada: " << overUmMeio<< "\n\n";
-
-    
+    }    
 
     cout << "----------------------------------\n\n";
     cout << "- BRAZILIAN LEAGUE - Fixture 2\n\n";
@@ -63,10 +132,95 @@ int main(void)
     for(int i = 0; i <= 9; i++)
     {
        
+       if(totalScore[i] > 0)
+        {
+            
+            overMeio += 1;                       
+
+        }else
+        {
+            
+            underMeio += 1;
+
+        }
+
+        if(totalScore[i] > 1)
+        {
+
+            overUmMeio += 1;
+
+        }else
+        {
+            
+            underUmMeio += 1;
+
+        }
+
+        if(totalScore[i] > 2)
+        {
+
+            overDoisMeio += 1;
+
+        }else
+        {
+            
+            underDoisMeio += 1;
+
+        }
+
+        if(totalScore[i] > 3)
+        {
+
+            overTresMeio += 1;
+
+        }else
+        {
+            
+            underTresMeio += 1;
+
+        }
+
+        if(totalScore[i] > 4)
+        {
+
+            overQuatroMeio += 1;
+
+        }else
+        {
+            
+            underQuatroMeio += 1;
+
+        }
+
+        if(totalScore[i] > 5)
+        {
+
+            overCincoMeio += 1;
+
+        }else
+        {
+            
+            underCincoMeio += 1;
+
+        }
+
+        if(totalScore[i] > 6)
+        {
+
+            overSeisMeio += 1;
+
+        }else
+        {
+            
+            underSeisMeio += 1;
+
+        }
+
         cout << home[i] << homeScore[i] << " x " << awayScore[i] << away[i] << "\n\n";
+        totalGames += 1;
 
     }
-
+    
     cout << "----------------------------------\n\n";
     cout << "- BRAZILIAN LEAGUE - Fixture 3\n\n";
 
@@ -85,11 +239,147 @@ int main(void)
     for(int i = 0; i <= 9; i++)
     {
        
-        cout << home[i] << homeScore[i] << " x " << awayScore[i] << away[i] << "\n\n";
+        if(totalScore[i] > 0)
+        {
+            
+            overMeio += 1;                       
 
+        }else
+        {
+            
+            underMeio += 1;
+
+        }
+
+        if(totalScore[i] > 1)
+        {
+
+            overUmMeio += 1;
+
+        }else
+        {
+            
+            underUmMeio += 1;
+
+        }
+
+        if(totalScore[i] > 2)
+        {
+
+            overDoisMeio += 1;
+
+        }else
+        {
+            
+            underDoisMeio += 1;
+
+        }
+
+        if(totalScore[i] > 3)
+        {
+
+            overTresMeio += 1;
+
+        }else
+        {
+            
+            underTresMeio += 1;
+
+        }
+
+        if(totalScore[i] > 4)
+        {
+
+            overQuatroMeio += 1;
+
+        }else
+        {
+            
+            underQuatroMeio += 1;
+
+        }
+
+        if(totalScore[i] > 5)
+        {
+
+            overCincoMeio += 1;
+
+        }else
+        {
+            
+            underCincoMeio += 1;
+
+        }
+
+        if(totalScore[i] > 6)
+        {
+
+            overSeisMeio += 1;
+
+        }else
+        {
+            
+            underSeisMeio += 1;
+
+        }
+
+        cout << home[i] << homeScore[i] << " x " << awayScore[i] << away[i] << "\n\n";
+        totalGames += 1;
+
+        averageOverMeio = (overMeio/totalGames) * 100;
+        averageOverUmMeio = (overUmMeio/totalGames) * 100;
+        averageOverDoisMeio = (overDoisMeio/totalGames) * 100;
+        averageOverTresMeio = (overTresMeio/totalGames) * 100;
+        averageOverQuatroMeio = (overQuatroMeio/totalGames) * 100;
+        averageOverCincoMeio = (overCincoMeio/totalGames) * 100;
+        averageOverSeisMeio = (overSeisMeio/totalGames) * 100;  
+
+        averageUnderMeio = (underMeio/totalGames) * 100;        
+        averageUnderUmMeio = (underUmMeio/totalGames) * 100;        
+        averageUnderDoisMeio = (underDoisMeio/totalGames) * 100;        
+        averageUnderTresMeio = (underTresMeio/totalGames) * 100;        
+        averageUnderQuatroMeio = (underQuatroMeio/totalGames) * 100;        
+        averageUnderCincoMeio = (underCincoMeio/totalGames) * 100;
+        averageUnderSeisMeio = (underSeisMeio/totalGames) * 100;    
+        
     }
 
-    
+        
+
+    cout << "----------------------------------\n\n";
+    cout << "Over 0.5: " << overMeio << "\n\n";
+    cout << "Over 1.5: " << overUmMeio << "\n\n";
+    cout << "Over 2.5: " << overDoisMeio << "\n\n";
+    cout << "Over 3.5: " << overTresMeio << "\n\n";
+    cout << "Over 4.5: " << overQuatroMeio << "\n\n";
+    cout << "Over 5.5: " << overCincoMeio << "\n\n";
+    cout << "Over 6.5: " << overSeisMeio << "\n\n";
+    cout << "---------------\n\n";
+    cout << "Under 6.5: " << underSeisMeio << "\n\n";
+    cout << "Under 5.5: " << underCincoMeio << "\n\n";
+    cout << "Under 4.5: " << underQuatroMeio << "\n\n";
+    cout << "Under 3.5: " << underTresMeio << "\n\n";
+    cout << "Under 2.5: " << underDoisMeio << "\n\n";
+    cout << "Under 1.5: " << underUmMeio << "\n\n";
+    cout << "Under 0.5: " << underMeio << "\n\n";
+    cout << "------------------\n\n";
+    cout << "Total de jogos: " << totalGames << "\n\n"; 
+    cout << "------------------\n\n";   
+    cout << "Average Over 0.5: " << averageOverMeio << " %\n\n";
+    cout << "Average Over 1.5: " << averageOverUmMeio << " %\n\n";
+    cout << "Average Over 2.5: " << averageOverDoisMeio << " %\n\n";
+    cout << "Average Over 3.5: " << averageOverTresMeio << " %\n\n";
+    cout << "Average Over 4.5: " << averageOverQuatroMeio << " %\n\n"; 
+    cout << "Average Over 5.5: " << averageOverCincoMeio << " %\n\n";
+    cout << "Average Over 6.5: " << averageOverSeisMeio << " %\n\n";
+    cout << "------------------\n\n";
+    cout << "Average Under 0.5: " << averageUnderMeio << " %\n\n";
+    cout << "Average Under 1.5: " << averageUnderUmMeio << " %\n\n";  
+    cout << "Average Under 2.5: " << averageUnderDoisMeio << " %\n\n";  
+    cout << "Average Under 3.5: " << averageUnderTresMeio << " %\n\n";  
+    cout << "Average Under 4.5: " << averageUnderQuatroMeio << " %\n\n";  
+    cout << "Average Under 5.5: " << averageUnderCincoMeio << " %\n\n";  
+    cout << "Average Under 6.5: " << averageUnderSeisMeio << " %\n\n";           
     cout << "----------------------------------\n\n\n";
 
     return 0;
