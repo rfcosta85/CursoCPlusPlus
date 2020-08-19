@@ -8,73 +8,88 @@ using namespace std;
 int main(void)
 {
 
-    string game[10], round[38];    
+    string game[10], round[38], home[10], away[10];
+    int homeScore[10], awayScore[10], totalScore[10], overMeio = 0, overUmMeio = 0, overDoisMeio = 0, overTresMeio = 0, overQuatroMeio = 0, overCincoMeio = 0, overSeiMeio = 0;       
 
-    game[0] = "Fortaleza 0 x 2 Atlético Pr \n";     
-    game[1] = "Coritiba 0 x 1 Internacional \n";    
-    game[2] = "Sport 3 x 2 Ceara \n";
-    game[3] = "Flamengo 0 x 1 Atlético Mg\n";
-    game[4] = "Santos 1 x 1 Redbull Bragantino \n";
-    game[5] = "Grêmio 1 x 0 FLuminense\n";
-    game[6] = "Botafogo x Bahia\n";
-    game[7] = "Palmeiras x Vasco\n";
-    game[8] = "Corinthians x Atlético Go\n";
-    game[9] = "Goiás x São Paulo\n";
+    game[0] = home[0] = "Fortaleza " ; away[0] =" Atlético Pr";homeScore[0] = 0; awayScore[0] = 2;totalScore[0] = homeScore[0] + awayScore[0];
+    game[1] = home[1] = "Coritiba " ; away[1] = " Internacional";homeScore[1] = 0; awayScore[1] = 1;totalScore[1] = homeScore[1] + awayScore[1];
+    game[2] = home[2] = "Sport "; away[2] = " Ceará"; homeScore[2] = 3; awayScore[2] = 2;totalScore[2] = homeScore[2] + awayScore[2];
+    game[3] = home[3] = "Flamengo "; away[3] = " Atlético Mg";homeScore[3] = 0; awayScore[3] = 1; totalScore[3] = homeScore[3] + awayScore[3];
+    game[4] = home[4] = "Santos "; away[4] = " RedBull Bragantino";homeScore[4] = 1; awayScore[4] = 1; totalScore[4] = homeScore[4] + awayScore[4];
+    game[5] = home[5] = "Grêmio "; away[5] = " Fluminense";homeScore[5] = 1; awayScore[5] = 0; totalScore[5] = homeScore[5] + awayScore[5];    
 
+    
+    
     cout << "- BRAZILIAN LEAGUE - Fixture 1\n\n";
 
-    for(int i = 0; i <= 9; i++)
+    for(int i = 0; i <= 5; i++)
     {
-       
-        round[0] = game[i];
-        cout << round[0] << "\n";
-
+        if(totalScore[i] > 0)
+        {
+            overMeio += 1;
+            if (totalScore[i] > 1)
+            {
+                overUmMeio += 1;
+            }
+            
+        } 
+        
+        
+        cout << home[i] << homeScore[i] << " x " << awayScore[i] << away[i] << "\n\n";
+        
     }
+
+    cout << "----------------------------------\n\n";
+    cout << "Total de over 0.5 na rodada: " << overMeio<< "\n\n";
+    cout << "Total de over 1.5 na rodada: " << overUmMeio<< "\n\n";
+
+    
 
     cout << "----------------------------------\n\n";
     cout << "- BRAZILIAN LEAGUE - Fixture 2\n\n";
 
-    game[0] = "Redbull Bragantino 1 x 1 Botafogo\n";
-    game[1] = "Atlético Mg 3 x 2 Corinthians\n";
-    game[2] = "Atlético Pr 2 x 1 Goiás\n";
-    game[3] = "Bahia 1 x 0 Coritiba\n";
-    game[4] = "Atlético Go 3 x 0 Flamengo\n";
-    game[5] = "Fluminense 1 x 1 Palmeiras\n";
-    game[6] = "Ceará 1 x 1 Grêmio\n";
-    game[7] = "São Paulo 1 x 0 Fortaleza\n";
-    game[8] = "Internacional 2 x 0 Santos\n";
-    game[9] = "Vasco 2 x 0 Sport\n";
+    game[0] = home[0] = "RedBull Bragantino "; away[0] = " Botafogo"; homeScore[0] = 1; awayScore[0] = 1;totalScore[0] = homeScore[0] + awayScore[0];
+    game[1] = home[1] = "Atlético Mg "; away[1] = " Corinthians"; homeScore[1] = 3; awayScore[1] = 2;totalScore[1] = homeScore[1] + awayScore[1];
+    game[2] = home[2] = "Atlético Pr "; away[2] = " Goiás"; homeScore[2] = 2; awayScore[2] = 1;totalScore[2] = homeScore[2] + awayScore[2];
+    game[3] = home[3] = "Bahia "; away[3] = " Coritiba"; homeScore[3] = 1; awayScore[3] = 0;totalScore[3] = homeScore[3] + awayScore[3];
+    game[4] = home[4] = "Atlético Go "; away[4] = " Flamengo"; homeScore[4] = 3; awayScore[4] = 0;totalScore[4] = homeScore[4] + awayScore[4];
+    game[5] = home[5] = "Fluminense "; away[5] = " Palmeiras"; homeScore[5] = 1; awayScore[5] = 1;totalScore[5] = homeScore[5] + awayScore[5];
+    game[6] = home[6] = "Ceará "; away[6] = " Grêmio"; homeScore[6] = 1; awayScore[6] = 1;totalScore[6] = homeScore[6] + awayScore[6];
+    game[7] = home[7] = "São Paulo "; away[7] = " Fortaleza"; homeScore[7] = 1; awayScore[7] = 0;totalScore[7] = homeScore[7] + awayScore[7];
+    game[8] = home[8] = "Internacional "; away[8] = " Santos"; homeScore[8] = 2; awayScore[8] = 0;totalScore[8] = homeScore[8] + awayScore[8];
+    game[9] = home[9] = "Vasco "; away[9] = " Sport"; homeScore[9] = 2; awayScore[9] = 0;totalScore[9] = homeScore[9] + awayScore[9];
+   
 
     for(int i = 0; i <= 9; i++)
     {
        
-        round[1] = game[i];
-        cout << round[1] << "\n";
+        cout << home[i] << homeScore[i] << " x " << awayScore[i] << away[i] << "\n\n";
 
     }
 
     cout << "----------------------------------\n\n";
     cout << "- BRAZILIAN LEAGUE - Fixture 3\n\n";
 
-    game[0] = "Grêmio 3 x 0 Corinthians\n";
-    game[1] = "Coritiba 0 x 1 Flamengo\n";
-    game[2] = "Palmeiras 1 x 1 Goiás\n";
-    game[3] = "Atlético Mg 2 x 0 Ceará\n";
-    game[4] = "Vasco 2 x 1 São Paulo\n";
-    game[5] = "Bahia 2 x 1 RedBull Bragantino\n";
-    game[6] = "Fluminense 2 x 1 Internacional\n";
-    game[7] = "Atlético Go 1 x 1 Sport\n";
-    game[8] = "Fortaleza 0 x 0 Botafogo\n";
-    game[9] = "Santos 3 x 1 Atlético Pr\n";
+    game[0] = home[0] = "Grêmio "; away[0] = " Corinthians"; homeScore[0] = 0; awayScore[0] = 0;totalScore[0] = homeScore[0] + awayScore[0];
+    game[1] = home[1] = "Coritiba "; away[1] = " Flamengo"; homeScore[1] = 0; awayScore[1] = 1;totalScore[1] = homeScore[1] + awayScore[1];
+    game[2] = home[2] = "Palmeiras "; away[2] = " Goiás"; homeScore[2] = 1; awayScore[2] = 1;totalScore[2] = homeScore[2] + awayScore[2];
+    game[3] = home[3] = "Atlético Mg "; away[3] = " Ceará"; homeScore[3] = 2; awayScore[3] = 0;totalScore[3] = homeScore[3] + awayScore[3];
+    game[4] = home[4] = "Vasco "; away[4] = " São Paulo"; homeScore[4] = 2; awayScore[4] = 1;totalScore[4] = homeScore[4] + awayScore[4];
+    game[5] = home[5] = "Bahia "; away[5] = " RedBull Bragantino"; homeScore[5] = 2; awayScore[5] = 1;totalScore[5] = homeScore[5] + awayScore[5];
+    game[6] = home[6] = "Fluminense "; away[6] = " Internacional"; homeScore[6] = 2; awayScore[6] = 1;totalScore[6] = homeScore[6] + awayScore[6];
+    game[7] = home[7] = "Atlético Go "; away[7] = " Sport"; homeScore[7] = 1; awayScore[7] = 1;totalScore[7] = homeScore[7] + awayScore[7];
+    game[8] = home[8] = "Fortaleza "; away[8] = " Botafogo"; homeScore[8] = 0; awayScore[8] = 0;totalScore[8] = homeScore[8] + awayScore[8];
+    game[9] = home[9] = "Santos "; away[9] = " Atlético Pr"; homeScore[9] = 3; awayScore[9] = 1;totalScore[9] = homeScore[9] + awayScore[9];  
+
 
     for(int i = 0; i <= 9; i++)
     {
        
-        round[1] = game[i];
-        cout << round[1] << "\n";
+        cout << home[i] << homeScore[i] << " x " << awayScore[i] << away[i] << "\n\n";
 
     }
 
+    
     cout << "----------------------------------\n\n\n";
 
     return 0;
