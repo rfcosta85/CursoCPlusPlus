@@ -12,5 +12,12 @@
     ],
     "files.associations": {
         "iostream": "cpp"
-    }
+    },
+    "cSpell.ignoreWords": [
+        "are",
+        "are retangulo",
+        "numeros",
+        "opcao",
+        "retangulo"
+    ]
 }
