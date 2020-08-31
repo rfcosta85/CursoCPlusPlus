@@ -58,7 +58,7 @@ void selecao(int vetor[], int tamanho)
             
         }  
 
-        auxiliar = 1;        
+        auxiliar = i;        
 
         for(j = i + 1; j < tamanho; j++)
         {
