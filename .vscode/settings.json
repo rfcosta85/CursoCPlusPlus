@@ -21,12 +21,14 @@
         "codigo",
         "compra",
         "esporte",
+        "inscricao",
         "nesporte",
         "nimc",
         "numeros",
         "opcao",
         "preco",
         "preco compra",
-        "retangulo"
+        "retangulo",
+        "tereza"
     ]
 }
