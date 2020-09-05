@@ -157,7 +157,7 @@ int buscaSequencial(int matricula[], int m, int t)
     if(t == 0)
     {
 
-        return -1; // testa lista vazia
+        return -1; // testa lista vazia; Usamos o número negativo, pq o C++ não retorna número negativo
 
         for(x = 0; x < t; x++)
         {
